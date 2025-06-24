@@ -9,7 +9,7 @@ using UnicomTICManagementSystem.Models;
 
 namespace UnicomTICManagementSystem.Controllers
 {
-    public static class LoginController 
+    public class UserController
     {
         public static User AuthenticateUser(string username, string password)
         {
@@ -25,7 +25,7 @@ namespace UnicomTICManagementSystem.Controllers
                     {
                         return new User
                         {
-                            Id= reader.GetInt32(0),
+                            Id = reader.GetInt32(0),
                             Username = reader.GetString(1),
                             Password = reader.GetString(2),
                             Role = reader.GetString(3)
@@ -37,3 +37,5 @@ namespace UnicomTICManagementSystem.Controllers
         }
     }
 }
+    
+

@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace UnicomTICManagementSystem.Models
 {
-    internal class Timetable
+    public class Timetable
     {
+        public int Id { get; set; }
+        public class TimeSlot
+        {
+            public DateTime Start { get; set; }
+            public DateTime End { get; set; }
+
+            public TimeSpan Duration => End - Start;
+        }
     }
 }

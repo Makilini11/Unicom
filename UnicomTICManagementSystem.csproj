@@ -71,12 +71,9 @@
     <Compile Include="Controllers\MarkController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TimetableController.cs" />
-    <Compile Include="Views\WelcomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\WelcomeForm.Designer.cs">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Data\DatabaseManager.cs" />
+    <Compile Include="Data\Migration.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Exam.cs" />
     <Compile Include="Models\Mark.cs" />
@@ -105,11 +102,11 @@
     <Compile Include="Views\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MainForm.cs">
+    <Compile Include="Views\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="Views\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\MarkForm.cs">
       <SubType>Form</SubType>
@@ -139,11 +136,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\CourseForm.resx">
+      <DependentUpon>CourseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\WelcomeForm.resx">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -155,6 +155,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="UnicomTICManagementSystemDB.db" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
