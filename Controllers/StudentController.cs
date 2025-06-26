@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace UnicomTICManagementSystem.Controllers
 {
-    internal class StudentController
+   public static class StudentController
     {
+      
     }
 }

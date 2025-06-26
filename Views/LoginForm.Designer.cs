@@ -121,7 +121,6 @@
             this.textpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textpassword.Location = new System.Drawing.Point(125, 56);
             this.textpassword.Name = "textpassword";
-            this.textpassword.PasswordChar = '*';
             this.textpassword.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textpassword.Size = new System.Drawing.Size(159, 29);
             this.textpassword.TabIndex = 11;

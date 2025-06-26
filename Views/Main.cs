@@ -17,8 +17,11 @@ namespace UnicomTICManagementSystem.Views
         public Main(User user)
         {
             InitializeComponent();
+            this.IsMdiContainer = true;
+
             currentUser = user;
-            SetRoleAccess(user.Role);
+        }
+         /*   SetRoleAccess(user.Role);
         }
         private void SetRoleAccess(string role)
         {
@@ -27,7 +30,7 @@ namespace UnicomTICManagementSystem.Views
             exam.Visible = role == "Admin" || role == "Staff";
             marks.Visible = role != "Student";
             time.Visible = true;
-        }
+        }*/
 
         private void Main_Load(object sender, EventArgs e)
         {
@@ -43,7 +46,7 @@ namespace UnicomTICManagementSystem.Views
         private void courses_Click(object sender, EventArgs e)
         {
             var form = new CourseForm();
-            form.MdiParent = this;
+            
             form.Show();
         }
 
@@ -55,12 +58,71 @@ namespace UnicomTICManagementSystem.Views
 
         private void close_Click(object sender, EventArgs e)
         {
-            foreach (Form form in this.MdiChildren) form.Close();
+            Application.Exit();
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void addNewStudentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddStudentForm addstu = new AddStudentForm();
+            addstu.Show(this);
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserForm user = new UserForm();
+           
+            user.Show(this);
+
+        }
+
+        private void timetablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TimetableForm timetable = new TimetableForm();
+            timetable.Show(this);
+        }
+
+        private void attendancesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AttendenceForm attendenceForm = new AttendenceForm();
+            attendenceForm.Show(this);
+        }
+
+        private void examsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExamForm exam = new ExamForm();
+            exam.Show(this);
+        }
+
+        private void marksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MarkForm mark = new MarkForm();
+            mark.Show(this);
+        }
+
+        private void coursesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CourseForm course = new CourseForm();
+            course.Show(this);
+        }
+
+        private void studentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

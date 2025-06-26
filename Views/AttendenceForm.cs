@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace UnicomTICManagementSystem.Views
 {
-    public partial class MarkForm : Form
+    public partial class AttendenceForm : Form
     {
-        public MarkForm()
+        public AttendenceForm()
         {
             InitializeComponent();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
